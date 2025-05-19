@@ -949,7 +949,7 @@ class Multiplexer:
                                     case "start_is_keyboard":
                                         ev["code"] = "keyboard"
                                     case "select_is_guide":
-                                        ev["code"] = "share"
+                                        ev["code"] = "select"
                                     case _:
                                         ev["code"] = "mode"
                             case "select":
@@ -964,7 +964,7 @@ class Multiplexer:
                                 if self.swap_guide == "guide_is_start":
                                     ev["code"] = "start"
                                 else:
-                                    ev["code"] = "select"
+                                    ev["code"] = "start"
                             case "share":
                                 match self.swap_guide:
                                     case "start_is_keyboard":
@@ -972,7 +972,7 @@ class Multiplexer:
                                     case "guide_is_start":
                                         ev["code"] = "select"
                                     case _:
-                                        ev["code"] = "start"
+                                        ev["code"] = "share"
                             case "keyboard":
                                 if self.swap_guide == "start_is_keyboard":
                                     ev["code"] = "start"
